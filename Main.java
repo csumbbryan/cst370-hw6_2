@@ -57,7 +57,7 @@ class Main
                         " ik: " + adjMatrix[i][k] + " kj: " + adjMatrix[k][j]);
                     if(adjMatrix[i][k] != -1 && adjMatrix[k][j] != -1) {
                         if(adjMatrix[i][j] == -1) {
-                            adjMatrix[i][j] = adjMatrix[i][k] + adjMatrix[k][j]);
+                            adjMatrix[i][j] = adjMatrix[i][k] + adjMatrix[k][j];
                         } else {
                             adjMatrix[i][j] = Math.min(adjMatrix[i][j],
                                 adjMatrix[i][k] + adjMatrix[k][j]);
