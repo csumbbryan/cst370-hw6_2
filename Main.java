@@ -33,6 +33,7 @@ class Main
 
         int vertCount = Integer.parseInt(scanner.nextLine());
         Integer[][] adjMatrix = new Integer[vertCount][vertCount];
+        Integer[][] spMatrix = new Integer[vertCount][vertCount];
         for(int i = 0; i < vertCount; i++) {
             String[] row = scanner.nextLine().split(" ");
             for(int j = 0; j < row.length; j++) {
@@ -41,6 +42,23 @@ class Main
         }
 
         System.out.println("Adjacency Matrix:");
+        for(int i = 0; i < vertCount; i++) {
+            String output = "";
+            for(int j = 0; j < vertCount; j++) {
+                output += adjMatrix[i][j] + " ";
+            }
+            System.out.println(output);
+        }
+
+        for(int k = 0; k < vertCount; k++) {
+            for(int i = 1; i < vertCount; i++) {
+                for (int j = 1; j < vertCount; j++) {
+                    adjMatrix[i][j] = Math.min(adjMatrix[i][j], adjMatrix[i][k] + adjMatrix[k][j]);
+                }
+            }
+        }
+
+        System.out.println("Shortest Path Matrix:");
         for(int i = 0; i < vertCount; i++) {
             String output = "";
             for(int j = 0; j < vertCount; j++) {
