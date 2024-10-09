@@ -13,15 +13,42 @@
  * Name: Write your name
  * Date: MM/DD/YYYY
  */
- 
-class Main 
+
+import java.util.Scanner;
+
+class Main
 {
     public static void main(String[] args) {
 
-        // Develop your program here.
-        // The following is just a sample statement and and you need to replace it with your code
-        
-        System.out.println("Hello world!");
+        //Floyd's Algorithm
+        //Weighted graphs using All Pairs Shortest Paths
+        //Input: the weight matrix W of a graph with no negative-length
+        //cycle
+        //D = W // Temp array
+        //for k = 1 to n do
+            //for i = 1 to n do
+                //for j = 1 to n do
+                    //D[i,j] = min {D[i,j], D[i,k] + D[k,j]}
+        Scanner scanner = new Scanner(System.in);
+
+        int vertCount = Integer.parseInt(scanner.nextLine());
+        Integer[][] adjMatrix = new Integer[vertCount][vertCount];
+        for(int i = 0; i < vertCount; i++) {
+            String[] row = scanner.nextLine().split(" ");
+            for(int j = 0; j < row.length; j++) {
+                adjMatrix[i][j] = Integer.parseInt(row[j]);
+            }
+        }
+
+        System.out.println("Adjacency Matrix:");
+        for(int i = 0; i < vertCount; i++) {
+            String output = ""
+            for(int j = 0; j < vertCount; j++) {
+                output += adjMatrix[i][j] + " ";
+            }
+            System.out.println(output);
+        }
+
     }
 }
 
