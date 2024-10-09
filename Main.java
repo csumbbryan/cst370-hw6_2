@@ -41,6 +41,7 @@ class Main
             }
         }
 
+        /*
         System.out.println("Adjacency Matrix:");
         for(int i = 0; i < vertCount; i++) {
             String output = "";
@@ -49,12 +50,13 @@ class Main
             }
             System.out.println(output);
         }
+        */
 
         for(int k = 0; k < vertCount; k++) {
             for(int i = 0; i < vertCount; i++) {
                 for (int j = 0; j < vertCount; j++) {
-                    System.out.println("Processing: \n ij: " + adjMatrix[i][j] +
-                        " ik: " + adjMatrix[i][k] + " kj: " + adjMatrix[k][j]);
+                    //System.out.println("Processing: \n ij: " + adjMatrix[i][j] +
+                    //    " ik: " + adjMatrix[i][k] + " kj: " + adjMatrix[k][j]);
                     if(adjMatrix[i][k] != -1 && adjMatrix[k][j] != -1) {
                         if(adjMatrix[i][j] == -1) {
                             adjMatrix[i][j] = adjMatrix[i][k] + adjMatrix[k][j];
@@ -68,7 +70,7 @@ class Main
             }
         }
 
-        System.out.println("Shortest Path Matrix:");
+        //System.out.println("Shortest Path Matrix:");
         for(int i = 0; i < vertCount; i++) {
             String output = "";
             for(int j = 0; j < vertCount; j++) {
