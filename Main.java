@@ -53,10 +53,13 @@ class Main
         for(int k = 0; k < vertCount; k++) {
             for(int i = 0; i < vertCount; i++) {
                 for (int j = 0; j < vertCount; j++) {
+                    System.out.println("Processing: \n ij: " + adjMatrix[i][j] +
+                        " ik: " + adjMatrix[i][k] + " kj: " + adjMatrix[k][j]);
                     if(adjMatrix[i][k] != -1 && adjMatrix[k][j] != -1) {
                         adjMatrix[i][j] = Math.min(adjMatrix[i][j],
                             adjMatrix[i][k] + adjMatrix[k][j]);
                     }
+
                 }
             }
         }
