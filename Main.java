@@ -56,8 +56,12 @@ class Main
                     System.out.println("Processing: \n ij: " + adjMatrix[i][j] +
                         " ik: " + adjMatrix[i][k] + " kj: " + adjMatrix[k][j]);
                     if(adjMatrix[i][k] != -1 && adjMatrix[k][j] != -1) {
-                        adjMatrix[i][j] = Math.min(adjMatrix[i][j],
-                            adjMatrix[i][k] + adjMatrix[k][j]);
+                        if(adjMatrix[i][j] == -1) {
+                            adjMatrix[i][j] = adjMatrix[i][k] + adjMatrix[k][j]);
+                        } else {
+                            adjMatrix[i][j] = Math.min(adjMatrix[i][j],
+                                adjMatrix[i][k] + adjMatrix[k][j]);
+                        }
                     }
 
                 }
