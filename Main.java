@@ -53,7 +53,10 @@ class Main
         for(int k = 0; k < vertCount; k++) {
             for(int i = 1; i < vertCount; i++) {
                 for (int j = 1; j < vertCount; j++) {
-                    adjMatrix[i][j] = Math.min(adjMatrix[i][j], adjMatrix[i][k] + adjMatrix[k][j]);
+                    if(!(adjMatrix[i][k] == -1 || adjMatrix[k][j] == -1)) {
+                        adjMatrix[i][j] = Math.min(adjMatrix[i][j],
+                            adjMatrix[i][k] + adjMatrix[k][j]);
+                    }
                 }
             }
         }
