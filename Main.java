@@ -75,7 +75,7 @@ class Main
             String output = "";
             for(int j = 0; j < vertCount; j++) {
                 output += adjMatrix[i][j];
-                if(j == vertCount - 1) output += " ";
+                if(j != vertCount - 1) output += " ";
             }
             System.out.println(output);
         }
