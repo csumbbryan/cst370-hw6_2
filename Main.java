@@ -42,7 +42,7 @@ class Main
 
         System.out.println("Adjacency Matrix:");
         for(int i = 0; i < vertCount; i++) {
-            String output = ""
+            String output = "";
             for(int j = 0; j < vertCount; j++) {
                 output += adjMatrix[i][j] + " ";
             }
