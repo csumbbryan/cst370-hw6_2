@@ -9,9 +9,10 @@
 
 // Finish the head comment with Abstract, Name, and Date.
 /*
- * Abstract: Describe the main ideas of the program.
- * Name: Write your name
- * Date: MM/DD/YYYY
+ * Abstract: Program accepts vertices and weighted adjacency matrix, then determines the
+ * All-Pairs Shortest Path, output as a Matrix
+ * Name: Bryan Zanoli
+ * Date: 10/15/2024
  */
 
 import java.util.Scanner;
